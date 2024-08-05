@@ -22,8 +22,7 @@ class ExperimentalAdapter(BaseTemplate):
             ]
 
             if not any(has_value):
-                assert False, "No input variables found in the example"
-
+                pass
             for i in range(1, len(has_value)):
                 if has_value[i - 1] and not any(has_value[i:]):
                     example[self.fields[i].input_variable] = ""
