@@ -288,6 +288,6 @@ def optimize_signature(
 
     return OptimizerResult(
         program=module,
-        signatures=[{name: k, signature: candidates[k][max(scores)]} for k in candidates.keys()],
+        signatures=[{"name": k, "signature": candidates[k][scores.index(max(scores))]} for k in candidates.keys()],
         scores=scores,
     )
